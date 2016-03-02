@@ -370,7 +370,6 @@ const ListItem = React.createClass({
 
   _handleRightIconButtonTouchTap(event) {
     const iconButton = this.props.rightIconButton;
-
     //Stop the event from bubbling up to the list-item
     event.stopPropagation();
     if (iconButton && iconButton.props.onTouchTap) iconButton.props.onTouchTap(event);
@@ -378,6 +377,7 @@ const ListItem = React.createClass({
 
   _handleTouchStart(event) {
     this.setState({touch: true});
+    event.preventDefault();
     this.props.onTouchStart(event);
   },
 
