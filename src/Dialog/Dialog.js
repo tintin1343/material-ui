@@ -142,6 +142,7 @@ function getStyles(props, context) {
       color: dialog.bodyColor,
       padding: `${props.title ? 0 : gutter}px ${gutter}px ${gutter}px`,
       boxSizing: 'border-box',
+      paddingTop: 0,
       overflowY: autoScrollBodyContent ? 'auto' : 'hidden',
     },
   };
